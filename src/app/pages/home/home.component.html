@@ -1,1 +1,70 @@
-<p>home works!</p>
+  <!-- Order Management Systme Header -->
+
+<div class="container">
+
+  <div class=" row omsheader">
+    <div class="col">
+      <h1><strong>Order Management System</strong></h1>
+    </div>
+
+    <div class="mat-mdc-form-field col">
+      <mat-form-field>
+        <i class="bi bi-search"></i>
+        <input style="padding-left: 30px;" matInput (keyup)="applyFilter($event)"
+          placeholder="Search Order Description here" #input>
+      </mat-form-field>
+    </div>
+
+  </div>
+
+  <!-- Order Management Systme Table Here -->
+
+  <div class="mat-elevation-z8 ">
+    <table mat-table [dataSource]="dataSource">
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="Order Id">
+        <th mat-header-cell *matHeaderCellDef> Order Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Order Description">
+        <th mat-header-cell *matHeaderCellDef> Order Description </th>
+        <td mat-cell *matCellDef="let element">{{element.orderDescription}} </td>
+      </ng-container>
+
+
+
+      <ng-container matColumnDef="Count of item Types Included In Order">
+        <th mat-header-cell *matHeaderCellDef> Count of item Types Included In Order </th>
+        <td mat-cell *matCellDef="let element"> <span style="padding: 10px;">Apparel : {{countApparels(element)}}</span>
+          <span style="padding: 10px;">grocery:{{countGrocery(element)}}</span>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Created By">
+        <th mat-header-cell *matHeaderCellDef> Created By </th>
+        <td mat-cell *matCellDef="let element"> {{element.createdBy}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Created Date">
+        <th mat-header-cell *matHeaderCellDef> Created Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.createdAt}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let element"> Delete </td>
+      </ng-container>
+      <!-- Name Column -->
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+
+
+
+  </div>
+  <button type="button" class="btn btn-primary mt-4 mb-4 p-3" >Create New Order</button>
+</div>
