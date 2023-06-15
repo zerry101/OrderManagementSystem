@@ -12,8 +12,8 @@ The Order Management System assists user to keep track of order details of the c
    
 ## 3 Run Project
   
-  #(i)Run   `code .` in git bash terminal this will lead to a  popup of a new window  of vscode 
-  #(ii)Now do a right click on 'src' folder in choose "open in integrated terminal"
+  *(i)Run   `code .` in git bash terminal this will lead to a  popup of a new window  of vscode 
+  *(ii)Now do a right click on 'src' folder in choose "open in integrated terminal"
   (iii)After this, run command `npm install` to automatically install  all the npm depencies in mentioned angular.json file
   (iV)Eventually, run command `npm start --port 4200` this will compile all files of the angular project for few minutes 
   (V)After succesfully compiled message open the a new browser window and write "https:http://localhost:4200/" to view the project or click on the browser in terminal by pressing (alt + click) 
