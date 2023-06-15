@@ -6,7 +6,7 @@ The Order Management System assists user to keep track of order details of the c
   * Press (Ctrl + /)  in your chosen folder then write gitbash.ink to open git terminal 
 
 ## 2 Cloning the Project  
-  * Now write command :-  `git remote add origin https://github.com/zerry101/OrderManagementSystem.git`
+  * Now run command :-  `git clone https://github.com/zerry101/OrderManagementSystem.git`
 
   * This will help you to clone the orderManagementSystem  in your computer system 
    
